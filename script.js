@@ -1,3 +1,9 @@
+// Checks if the input is a number, for later purpose
+
+function validateNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+};
+
 // The age calculator
 
 function calculateAge(birthYear) {
@@ -16,6 +22,7 @@ function calculateAge(birthYear) {
     return "Please type in your birthyear as a number.";
   }
 };
+// Refactor this to have to functions, one that gives an age the other to return statements based on it
 
 calculateAge(1993);
 calculateAge("hello");
@@ -39,6 +46,48 @@ function calculateSupply(age, amountPerDay) {
   }
 };
 
-calculateSupply(60, 1.5)
-calculateSupply("hi", 20)
-calculateSupply("82", "12.2")
+calculateSupply(60, 1.5);
+calculateSupply("hi", 20);
+calculateSupply("82", "12.2");
+
+
+// The Geometizer
+
+function calcCircumference(radius) {
+  if (radius >= 0 && typeof(radius) == "number") {
+    const circumferenceCalculation = (radius * 2 * Math.PI).toFixed(2)
+    return `The circumference is ${circumferenceCalculation}`;
+  } else {
+    return "The radius must be a positive number";
+  }
+};
+
+
+function calcArea(radius) {
+  if (radius >= 0 && typeof(parseInt(radius)) == "number") {
+    const areaCalculation = (Math.PI * radius ** 2).toFixed(2)
+    return `The area is ${areaCalculation}`;
+  } else {
+    return "The radius must be a positive number";
+  }
+}
+
+// The temperature converter
+
+function celsiusToFahrenheit(celsius) {
+  if (validateNumber(celsius)) {
+    const calcFahrenheit = Math.round(celsius * 9 / 5 + 32);
+    return `${celsius}°C is approximately ${calcFahrenheit}°F`;
+  } else {
+    return "Celsius must be a number"
+  }
+};
+
+function fahrenheitToCelsius(fahrenheit) {
+  if (validateNumber(celsius)) {
+    const calcCelsius = Math.round((fahrenheit - 32) * 5 / 9);
+    return `${fahrenheit}°F is approximately ${calcCelsius}°C`;
+  } else {
+    return "Fahrenheit must be a number"
+  }
+};
