@@ -1,5 +1,4 @@
-// Checks if the input is a number, for later purpose
-
+// Checks if the input is a number (as string or integer), for later purpose
 function validateNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 };
@@ -32,9 +31,9 @@ calculateAge("2018");
 // The lifetyme supply calculator
 
 function calculateSupply(age, amountPerDay) {
-  const maxAge = 81  // Average life expectancy in Denmark
+  const maxAge = 81                   // Average life expectancy in Denmark
 
-  if (maxAge == age) {
+  if (maxAge == age) {                // Using double equal signs so that the same number as string or integer would be equal
     return "I bet you need more, but I cannot tell you how much...";
   } else if (maxAge < age) {
     return "Oh wow, that snack must have really kept you going over all these years.";
@@ -42,7 +41,7 @@ function calculateSupply(age, amountPerDay) {
     const totalSnackAmount = (maxAge - age) * amountPerDay * 365;
     return `You will need ${Math.round(totalSnackAmount)} to last you until the ripe old age of ${maxAge}!`;
   } else {
-    return "Your input must be viable numbers."
+    return "Your input must be viable, positive numbers."
   }
 };
 
@@ -54,7 +53,7 @@ calculateSupply("82", "12.2");
 // The Geometizer
 
 function calcCircumference(radius) {
-  if (radius >= 0 && typeof(radius) == "number") {
+  if (radius >= 0 && validateNumber(radius)) {
     const circumferenceCalculation = (radius * 2 * Math.PI).toFixed(2)
     return `The circumference is ${circumferenceCalculation}`;
   } else {
@@ -64,13 +63,14 @@ function calcCircumference(radius) {
 
 
 function calcArea(radius) {
-  if (radius >= 0 && typeof(parseInt(radius)) == "number") {
+  if (radius >= 0 && validateNumber(radius)) {
     const areaCalculation = (Math.PI * radius ** 2).toFixed(2)
     return `The area is ${areaCalculation}`;
   } else {
     return "The radius must be a positive number";
   }
 }
+
 
 // The temperature converter
 
