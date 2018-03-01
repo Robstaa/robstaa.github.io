@@ -14,3 +14,5 @@
 - Slideshow Style from task to task
 - Need to fix that you cant click arrows when at start or beginning
 - Rename CSS classes to ...-....
+- SLide in effect -> Position absolute and translate
+- Refactor render tasks to loop through class names instead of going for each id once

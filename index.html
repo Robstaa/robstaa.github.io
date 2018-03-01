@@ -25,11 +25,15 @@
             <div id="go-previous" class="zeroOpacity"><img src="assets/images/arrow-left.png" alt="previous-page" class="direction-arrow"></div>
 
               <!-- Page 1 - Age calculator -->
-              <div class="pageContent inner-position text-center">
+              <div class="pageContent text-center">
                 <h1 class="sectionTitle">Age</h1>
-                <form onsubmit="renderAgeOutput();return false">
-                  <input class="userInput" type="text" id="age-calculator-input">
-                  <input type="submit" value="Calculate!" class="btn btn-lg btn-danger">
+                <div>
+                  <p>Forgot what your birthyear is?</p>
+                  <p>Happens to the best! Just type in your birthyear and I can tell you how old you are.</p>
+                </div>
+                <form">
+                  <input class="userInput" type="number" id="age-calculator-input" step="1" placeholder="1993">
+                  <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="age-calculator-submit">
                 </form>
                 <div>
                   <p id="age-calculator-output"></p>
@@ -39,7 +43,18 @@
               <!-- Page 2 -Lifetime supply calculator -->
               <div class="displayNone pageContent text-center">
                 <h1 class="sectionTitle">Lifetime</h1>
-                <input class="userInput" type="text" id="lifeteime-supply-input">
+                <div>
+                  <p>Ever wondered how much of your favorite Snack you still gonna eat in your lifetime?</p>
+                  <p>Easy: How much of it do you eat per day?</p>
+                </div>
+                <form">
+                  <input class="userInput" type="number" id="age-input" placeholder="24" steps="1">
+                  <input class="userInput" type="number" id="lifetime-supply-input" placeholder="1.5">
+                  <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="lifetime-supply-submit">
+                </form>
+                <div>
+                  <p id="lifetime-supply-output"></p>
+                </div>
               </div>
 
               <!-- Page 2 -Lifetime supply calculator -->

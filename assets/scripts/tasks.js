@@ -9,14 +9,15 @@ function validateNumber(n) {
 function calculateAge(birthYear) {
   const date = new Date();
   const currentYear = date.getFullYear(); // Gets the current year as integer
+  const birthYearRounded = Math.floor(birthYear) // In case a user types in a float...
 
-  if (birthYear == currentYear) {         // Using double equal signs so that the same number as string or integer would be equal
+  if (birthYearRounded == currentYear) {         // Using double equal signs so that the same number as string or integer would be equal
     return "You were just born or are about to be!";
-  } else if (birthYear > currentYear) {
+  } else if (birthYearRounded > currentYear) {
     return "You are not born yet...";
-  } else if (birthYear < currentYear) {
-    const possibleAgeOne = currentYear - birthYear - 1;
-    const possibleAgeTwo = currentYear - birthYear;
+  } else if (birthYearRounded < currentYear) {
+    const possibleAgeOne = currentYear - birthYearRounded - 1;
+    const possibleAgeTwo = currentYear - birthYearRounded;
     return `You are either ${possibleAgeOne} or ${possibleAgeTwo} years old.`;
   } else {
     return "Please type in your birthyear as a number.";
