@@ -1,0 +1,36 @@
+.activeWindow {
+  display: block;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.hiddenWindow {
+  opacity: 0;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.zeroOpacity {
+  opacity: 0 !important;
+}
+
+.direction-arrow {
+  height: 70px;
+  width: 70px;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.arrow-transition {
+  opacity: 0.9;
+}
+
+.arrow-transition:hover {
+  opacity: 1;
+  cursor: pointer;
+}

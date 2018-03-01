@@ -11,3 +11,5 @@
 
 - Refactor to ES6 Standard
 - Make JS DRY, to not have same or similar strings and calculations twice
+- Slideshow Style from task to task
+- Need to fix that you cant click arrows when at start or beginning

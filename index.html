@@ -6,16 +6,39 @@
 
     <!-- Stylesheets incl. Bootstrap 3 -->
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/homepage.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/cover.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/transitions.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
 
   <body>
-    <div class="container">
-      <h1>Initial setup</h1>
+    <!-- Black Cover and Go-button to let the game begin -->
+    <div id="black-cover" class="d-flex justify-content-center align-items-center">
+      <div class="d-flex align-items-center justify-content-center" id="start">Go</div>
     </div>
 
+    <!-- Actual container for the page content -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="fullHeight d-flex justify-content-between align-items-center">
+            <div id="go-previous" class="zeroOpacity"><img src="assets/images/arrow-left.png" alt="previous-page" class="direction-arrow"></div>
+            <div class="pageContent displayNone">
+              <h1 class="sectionTitle">hello</h1>
+              <input class="userInput" type="text" id="ageCalculatorInput">
+            </div>
+            <div id="go-next" class="arrow-transition"><img src="assets/images/arrow-right.png" alt="next-page" class="direction-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+
     <!-- Javascript -->
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="assets/scripts/homepage.js"></script>
+    <script type="text/javascript" src="assets/scripts/tasks.js"></script>
   </body>
 
 </html>

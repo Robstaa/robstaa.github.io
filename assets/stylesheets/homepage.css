@@ -1,0 +1,8 @@
+body {
+  background: url("../images/mountain_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.fullHeight {
+  height: 100vh;
+}
