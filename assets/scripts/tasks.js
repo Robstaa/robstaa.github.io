@@ -58,7 +58,7 @@ calculateSupply("82", "12.2");
 function calcCircumference(radius) {
   if (radius >= 0 && validateNumber(radius)) {
     const circumferenceCalculation = (radius * 2 * Math.PI).toFixed(2)
-    return `The circumference is ${circumferenceCalculation}`;
+    return `The circumference is ${circumferenceCalculation}cm`;
   } else {
     return "The radius must be a positive number";
   }
@@ -66,9 +66,10 @@ function calcCircumference(radius) {
 
 
 function calcArea(radius) {
+  const square = "\u00B2"
   if (radius >= 0 && validateNumber(radius)) {
     const areaCalculation = (Math.PI * radius ** 2).toFixed(2)
-    return `The area is ${areaCalculation}`;
+    return `The area is ${areaCalculation}cm${square}`;
   } else {
     return "The radius must be a positive number";
   }

@@ -5,8 +5,7 @@
     <title>Robin for Wiredelta</title>
 
     <!-- Stylesheets incl. Bootstrap 4 and Google Fonts(Josefin Sans) -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/homepage.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/cover.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/transitions.css">
@@ -20,20 +19,21 @@
     </div>
 
     <!-- Actual container for the page content -->
-    <div class="container hidden-overflow">
+    <div class="container">
       <div class="row">
         <div class="col">
-          <div class="fullHeight d-flex justify-content-between align-items-center">
+          <div class="full-height d-flex justify-content-between align-items-center">
             <div id="go-previous" class="zero-opacity"><img src="assets/images/arrow-left.png" alt="previous-page" class="direction-arrow"></div>
 
               <!-- Page 1 - Age calculator -->
               <div class="page-content text-center">
-                <h1 class="section-title">Age</h1>
+                <h1 class="section-title">The Age Calculator</h1>
+                <hr>
                 <div>
-                  <p>Forgot what your birthyear is?</p>
+                  <p>Forgot what your age is?</p>
                   <p>Happens to the best! Just type in your birthyear and I can tell you how old you are.</p>
                 </div>
-                <form">
+                <form>
                   <input class="user-input" type="number" id="age-calculator-input" step="1" placeholder="1993">
                   <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="age-calculator-submit">
                 </form>
@@ -43,20 +43,22 @@
               </div>
 
               <!-- Page 2 -Lifetime supply calculator -->
-              <div class="display-none page-content text-center">
-                <h1 class="section-title">Lifetime</h1>
+              <div class="display-none page-content text-center" id="lifetime-supply-calculator">
+                <h1 class="section-title">The Lifetime Supply Calculator</h1>
+                <hr>
                 <div>
                   <p>Ever wondered how much of your favorite Snack you still gonna eat in your lifetime?</p>
-                  <p>Easy: How much of it do you eat per day?</p>
                 </div>
-                <form">
-                  <div class="d-flex flex-column text-center justify-content-center">
-                    <label for="age-input">Age</label>
-                    <input class="user-input" type="number" id="age-input" placeholder="24" steps="1">
-                  </div>
-                  <div class="d-flex flex-column text-center justify-content-center">
-                    <label for="lifetime-supply-input">Number of snacks per day</label>
-                    <input class="user-input" type="number" id="lifetime-supply-input" placeholder="1.5">
+                <form>
+                  <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-flex flex-column align-items-center">
+                      <label for="age-input">Age</label>
+                      <input class="user-input" type="number" id="age-input" placeholder="24" steps="1">
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                      <label for="lifetime-supply-input">Number of snacks per day</label>
+                      <input class="user-input" type="number" id="lifetime-supply-input" placeholder="1.5">
+                    </div>
                   </div>
                   <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="lifetime-supply-submit">
                 </form>
@@ -66,13 +68,14 @@
               </div>
 
               <!-- Page 3 - Geometizer -->
-              <div class="display-none page-content text-center">
-                <h1 class="section-title">Geometizer</h1>
+              <div class="display-none page-content text-center" id="geometizer">
+                <h1 class="section-title">The Geometizer</h1>
+                <hr>
                 <div>
-                  <p>Quick maths</p>
-                  <p>While we are calculating stuff, you will never need, let's rather do something that helps</p>
+                  <p>By the way, I bet you want to calculate the circumference and the area of a circle</p>
                 </div>
                 <form>
+                  <label for="radius-input">Radius in cm</label>
                   <input class="user-input" type="number" id="radius-input" placeholder="6.5">
                   <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="radius-submit">
                 </form>
@@ -82,11 +85,11 @@
                 </div>
               </div>
 
-              <!-- Page 2 -Lifetime supply calculator -->
-              <div class="display-none page-content text-center">
-                <h1 class="section-title">Temperature</h1>
+              <!-- Page 4 -Lifetime supply calculator -->
+              <div class="display-none page-content text-center" id="temperature-converter">
+                <h1 class="section-title">The Temperature Converter</h1>
+                <hr>
                 <div>
-                  <p>Quick maths 2</p>
                   <p>Your private section for understanding American friends when they are talking about the weather!</p>
                 </div>
                 <form>
@@ -100,7 +103,9 @@
               </div>
 
               <div class="display-none page-content text-center">
-                <h1 class="section-title">Last</h1>
+                <h1 class="section-title">Thank you!</h1>
+                <hr>
+
               </div>
 
             <div id="go-next" class="arrow-transition"><img src="assets/images/arrow-right.png" alt="next-page" class="direction-arrow"></div>
