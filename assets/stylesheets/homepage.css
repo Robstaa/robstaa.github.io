@@ -6,3 +6,29 @@ body {
 .fullHeight {
   height: 100vh;
 }
+
+.hidden-overflow {
+  overflow: hidden;
+}
+
+.pageContent {
+  width: 80%;
+  height: 400px;
+  margin: 5px;
+  padding:15px;
+
+  background-color: white;
+  background: url("../images/grey-pattern.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+
+  /*transform: rotate(0deg);*/
+  transition: transform 1s;
+
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+/*.pageContent:hover {
+  transform: rotate(1deg);
+}*/

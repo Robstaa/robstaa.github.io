@@ -24,11 +24,16 @@ document.addEventListener("DOMContentLoaded", () =>  {
     displayNoneAfterTransition(blackCover, 4);
   }
 
-  // To make the window slide
+  // Arrows to change the page index
   let pageIndex = 0;
-  const lastPageIndex = 6;
+  const lastPageIndex = 4;
   const previousArrow = document.querySelector("#go-previous");
   const nextArrow = document.querySelector("#go-next");
+
+  const page2 = document.querySelector("#page2")
+
+  // Slideshow
+  allPages = document.querySelectorAll(".pageContent")
 
   previousArrow.classList.remove("direction-arrow:hover")
 
@@ -46,18 +51,19 @@ document.addEventListener("DOMContentLoaded", () =>  {
     if (pageIndex === 0) {
       previousArrow.classList.add("zeroOpacity");
       previousArrow.classList.remove("arrow-transition");
-      console.log(pageIndex);
     } else if (pageIndex ===  lastPageIndex) {
       nextArrow.classList.add("zeroOpacity");
       nextArrow.classList.remove("arrow-transition");
-      console.log(pageIndex);
     } else {
       previousArrow.classList.remove("zeroOpacity");
       previousArrow.classList.add("arrow-transition");
       nextArrow.classList.remove("zeroOpacity");
       nextArrow.classList.add("arrow-transition");
-      console.log(pageIndex);
     }
+    for (let i = 0; i < allPages.length; i++) {
+      allPages[i].classList.add("displayNone");
+    }
+    allPages[pageIndex].classList.remove("displayNone");
   };
 
   function nextPage() {
@@ -73,4 +79,8 @@ document.addEventListener("DOMContentLoaded", () =>  {
   };
 
 });
+
+
+
+
 

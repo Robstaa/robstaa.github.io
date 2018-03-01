@@ -9,7 +9,7 @@
 }
 
 .displayNone {
-  display: none;
+  display: none !important;
 }
 
 .displayBlock {
@@ -34,3 +34,13 @@
   opacity: 1;
   cursor: pointer;
 }
+
+/*.outer-position-right {
+  position: absolute;
+  right: -100%;
+  transition: all 2s ease;
+}
+
+.inner-position {
+  right: none !important;
+}*/

@@ -18,15 +18,46 @@
     </div>
 
     <!-- Actual container for the page content -->
-    <div class="container">
+    <div class="container hidden-overflow">
       <div class="row">
         <div class="col">
           <div class="fullHeight d-flex justify-content-between align-items-center">
             <div id="go-previous" class="zeroOpacity"><img src="assets/images/arrow-left.png" alt="previous-page" class="direction-arrow"></div>
-            <div class="pageContent displayNone">
-              <h1 class="sectionTitle">hello</h1>
-              <input class="userInput" type="text" id="ageCalculatorInput">
-            </div>
+
+              <!-- Page 1 - Age calculator -->
+              <div class="pageContent inner-position text-center">
+                <h1 class="sectionTitle">Age</h1>
+                <form onsubmit="renderAgeOutput();return false">
+                  <input class="userInput" type="text" id="age-calculator-input">
+                  <input type="submit" value="Calculate!" class="btn btn-lg btn-danger">
+                </form>
+                <div>
+                  <p id="age-calculator-output"></p>
+                </div>
+              </div>
+
+              <!-- Page 2 -Lifetime supply calculator -->
+              <div class="displayNone pageContent text-center">
+                <h1 class="sectionTitle">Lifetime</h1>
+                <input class="userInput" type="text" id="lifeteime-supply-input">
+              </div>
+
+              <!-- Page 2 -Lifetime supply calculator -->
+              <div class="displayNone pageContent text-center">
+                <h1 class="sectionTitle">Geometizer</h1>
+                <input class="userInput" type="text" id="geometizer-input">
+              </div>
+
+              <!-- Page 2 -Lifetime supply calculator -->
+              <div class="displayNone pageContent text-center">
+                <h1 class="sectionTitle">Temperature</h1>
+                <input class="userInput" type="text" id="temperature-converter-input">
+              </div>
+
+              <div class="displayNone pageContent text-center">
+                <h1 class="sectionTitle">Last</h1>
+              </div>
+
             <div id="go-next" class="arrow-transition"><img src="assets/images/arrow-right.png" alt="next-page" class="direction-arrow"></div>
           </div>
         </div>
@@ -39,6 +70,7 @@
     <!-- Javascript -->
     <script type="text/javascript" src="assets/scripts/homepage.js"></script>
     <script type="text/javascript" src="assets/scripts/tasks.js"></script>
+    <script type="text/javascript" src="assets/scripts/render-tasks.js"></script>
   </body>
 
 </html>
