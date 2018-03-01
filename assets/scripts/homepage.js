@@ -2,40 +2,38 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
   const startButton = document.querySelector("#start");
   const blackCover = document.querySelector("#black-cover");
+  const pageOne = document.querySelectorAll(".page-content")[0]
 
   // Variable to see which window should be displayed
 
   startButton.addEventListener("click", fadeOutDarkness);
 
 
-  // To set any element to display: none; after a specific number of seconds
+  // To set any element display to none after specific number of seconds
   function displayNoneAfterTransition(element, timeout) {
     setTimeout(() => {
-      element.className = ""
+      element.className = "";
       element.classList.add("display-none");
     }, timeout * 1000);
   };
 
-  // Beginning of website animation
+  // Beginning of website animation Fade out of the black, fade in of the content
   function fadeOutDarkness() {
-    startButton.classList.add("hidden-window");
+    startButton.classList.add("zero-opacity");
     displayNoneAfterTransition(startButton, 1);
-    blackCover.classList.add("hidden-window");
-    displayNoneAfterTransition(blackCover, 4);
-  }
+    blackCover.classList.add("zero-opacity");
+    displayNoneAfterTransition(blackCover, 1.5);
+    pageOne.classList.remove("zero-opacity")
+  };
+
 
   // Arrows to change the page index
   let pageIndex = 0;
   const lastPageIndex = 4;
   const previousArrow = document.querySelector("#go-previous");
   const nextArrow = document.querySelector("#go-next");
+  const allPages = document.querySelectorAll(".page-content")
 
-  const page2 = document.querySelector("#page2")
-
-  // Slideshow
-  allPages = document.querySelectorAll(".page-content")
-
-  previousArrow.classList.remove("direction-arrow:hover")
 
   nextArrow.addEventListener("click", () => {
     nextPage();

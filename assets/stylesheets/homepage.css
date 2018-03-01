@@ -22,6 +22,16 @@ body form {
   margin: 20px 0;
 }
 
+.media-button {
+  font-size: 30px;
+  color: white;
+  margin: 15px;
+}
+
+.media-button:hover {
+  color: black;
+}
+
 .full-height {
   height: 100vh;
 }
@@ -44,7 +54,7 @@ body form {
   background-size: cover;
   color: white;
 
-  transition: transform 1s;
+  transition: transform 1s, opacity 1.5s ease;
 
   border-radius: 10px;
   box-shadow: 3px 3px 15px rgba(0,0,0,0.6);
@@ -68,4 +78,9 @@ body form {
 
 .submit-button-style:hover {
   cursor: pointer;
+}
+
+#wiredelta-logo {
+  height: 128px;
+  width: 256px;
 }

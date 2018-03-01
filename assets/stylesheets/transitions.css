@@ -1,7 +1,3 @@
-.hidden-window {
-  opacity: 0;
-}
-
 .display-none {
   display: none !important;
 }
@@ -25,12 +21,9 @@
   cursor: pointer;
 }
 
-/*.outer-position-right {
-  position: absolute;
-  right: -100%;
-  transition: all 2s ease;
+@media (max-width: 550px) {
+  .direction-arrow {
+    height: 50px;
+    width: 50px;
+  }
 }
-
-.inner-position {
-  right: none !important;
-}*/
