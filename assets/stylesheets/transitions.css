@@ -1,22 +1,12 @@
-.activeWindow {
-  display: block;
-  opacity: 1;
-  transition: opacity 2s;
-}
-
-.hiddenWindow {
+.hidden-window {
   opacity: 0;
 }
 
-.displayNone {
+.display-none {
   display: none !important;
 }
 
-.displayBlock {
-  display: block;
-}
-
-.zeroOpacity {
+.zero-opacity {
   opacity: 0 !important;
 }
 

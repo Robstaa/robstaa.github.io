@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", () =>  {
   function displayNoneAfterTransition(element, timeout) {
     setTimeout(() => {
       element.className = ""
-      element.classList.add("displayNone");
+      element.classList.add("display-none");
     }, timeout * 1000);
   };
 
   // Beginning of website animation
   function fadeOutDarkness() {
-    startButton.classList.add("hiddenWindow");
+    startButton.classList.add("hidden-window");
     displayNoneAfterTransition(startButton, 1);
-    blackCover.classList.add("hiddenWindow");
+    blackCover.classList.add("hidden-window");
     displayNoneAfterTransition(blackCover, 4);
   }
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
   const page2 = document.querySelector("#page2")
 
   // Slideshow
-  allPages = document.querySelectorAll(".pageContent")
+  allPages = document.querySelectorAll(".page-content")
 
   previousArrow.classList.remove("direction-arrow:hover")
 
@@ -49,21 +49,21 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
   function pageChange() {
     if (pageIndex === 0) {
-      previousArrow.classList.add("zeroOpacity");
+      previousArrow.classList.add("zero-opacity");
       previousArrow.classList.remove("arrow-transition");
     } else if (pageIndex ===  lastPageIndex) {
-      nextArrow.classList.add("zeroOpacity");
+      nextArrow.classList.add("zero-opacity");
       nextArrow.classList.remove("arrow-transition");
     } else {
-      previousArrow.classList.remove("zeroOpacity");
+      previousArrow.classList.remove("zero-opacity");
       previousArrow.classList.add("arrow-transition");
-      nextArrow.classList.remove("zeroOpacity");
+      nextArrow.classList.remove("zero-opacity");
       nextArrow.classList.add("arrow-transition");
     }
     for (let i = 0; i < allPages.length; i++) {
-      allPages[i].classList.add("displayNone");
+      allPages[i].classList.add("display-none");
     }
-    allPages[pageIndex].classList.remove("displayNone");
+    allPages[pageIndex].classList.remove("display-none");
   };
 
   function nextPage() {

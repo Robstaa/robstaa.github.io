@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Wiredelta Sample Task</title>
+    <title>Robin for Wiredelta</title>
 
-    <!-- Stylesheets incl. Bootstrap 3 -->
+    <!-- Stylesheets incl. Bootstrap 4 and Google Fonts(Josefin Sans) -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/homepage.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/cover.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/transitions.css">
@@ -22,55 +24,83 @@
       <div class="row">
         <div class="col">
           <div class="fullHeight d-flex justify-content-between align-items-center">
-            <div id="go-previous" class="zeroOpacity"><img src="assets/images/arrow-left.png" alt="previous-page" class="direction-arrow"></div>
+            <div id="go-previous" class="zero-opacity"><img src="assets/images/arrow-left.png" alt="previous-page" class="direction-arrow"></div>
 
               <!-- Page 1 - Age calculator -->
-              <div class="pageContent text-center">
-                <h1 class="sectionTitle">Age</h1>
+              <div class="page-content text-center">
+                <h1 class="section-title">Age</h1>
                 <div>
                   <p>Forgot what your birthyear is?</p>
                   <p>Happens to the best! Just type in your birthyear and I can tell you how old you are.</p>
                 </div>
                 <form">
-                  <input class="userInput" type="number" id="age-calculator-input" step="1" placeholder="1993">
+                  <input class="user-input" type="number" id="age-calculator-input" step="1" placeholder="1993">
                   <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="age-calculator-submit">
                 </form>
                 <div>
-                  <p id="age-calculator-output"></p>
+                  <h3 id="age-calculator-output"></h3>
                 </div>
               </div>
 
               <!-- Page 2 -Lifetime supply calculator -->
-              <div class="displayNone pageContent text-center">
-                <h1 class="sectionTitle">Lifetime</h1>
+              <div class="display-none page-content text-center">
+                <h1 class="section-title">Lifetime</h1>
                 <div>
                   <p>Ever wondered how much of your favorite Snack you still gonna eat in your lifetime?</p>
                   <p>Easy: How much of it do you eat per day?</p>
                 </div>
                 <form">
-                  <input class="userInput" type="number" id="age-input" placeholder="24" steps="1">
-                  <input class="userInput" type="number" id="lifetime-supply-input" placeholder="1.5">
+                  <div class="d-flex flex-column text-center justify-content-center">
+                    <label for="age-input">Age</label>
+                    <input class="user-input" type="number" id="age-input" placeholder="24" steps="1">
+                  </div>
+                  <div class="d-flex flex-column text-center justify-content-center">
+                    <label for="lifetime-supply-input">Number of snacks per day</label>
+                    <input class="user-input" type="number" id="lifetime-supply-input" placeholder="1.5">
+                  </div>
                   <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="lifetime-supply-submit">
                 </form>
                 <div>
-                  <p id="lifetime-supply-output"></p>
+                  <h3 id="lifetime-supply-output"></h3>
+                </div>
+              </div>
+
+              <!-- Page 3 - Geometizer -->
+              <div class="display-none page-content text-center">
+                <h1 class="section-title">Geometizer</h1>
+                <div>
+                  <p>Quick maths</p>
+                  <p>While we are calculating stuff, you will never need, let's rather do something that helps</p>
+                </div>
+                <form>
+                  <input class="user-input" type="number" id="radius-input" placeholder="6.5">
+                  <input type="button" value="Calculate!" class="btn btn-lg btn-danger submit-button-style" id="radius-submit">
+                </form>
+                <div>
+                  <h3 id="circumference-output"></h3>
+                  <h3 id="area-output"></h3>
                 </div>
               </div>
 
               <!-- Page 2 -Lifetime supply calculator -->
-              <div class="displayNone pageContent text-center">
-                <h1 class="sectionTitle">Geometizer</h1>
-                <input class="userInput" type="text" id="geometizer-input">
+              <div class="display-none page-content text-center">
+                <h1 class="section-title">Temperature</h1>
+                <div>
+                  <p>Quick maths 2</p>
+                  <p>Your private section for understanding American friends when they are talking about the weather!</p>
+                </div>
+                <form>
+                  <input class="user-input" type="number" id="temperature-input" placeholder="28">
+                  <input type="button" value="°C to °F" class="btn btn-lg btn-success submit-button-style" id="celsius-submit">
+                  <input type="button" value="°F to °C" class="btn btn-lg btn-primary submit-button-style" id="fahrenheit-submit">
+                </form>
+                <div>
+                  <h3 id="temperature-output"></h3>
+                </div>
               </div>
 
-              <!-- Page 2 -Lifetime supply calculator -->
-              <div class="displayNone pageContent text-center">
-                <h1 class="sectionTitle">Temperature</h1>
-                <input class="userInput" type="text" id="temperature-converter-input">
-              </div>
-
-              <div class="displayNone pageContent text-center">
-                <h1 class="sectionTitle">Last</h1>
+              <div class="display-none page-content text-center">
+                <h1 class="section-title">Last</h1>
               </div>
 
             <div id="go-next" class="arrow-transition"><img src="assets/images/arrow-right.png" alt="next-page" class="direction-arrow"></div>

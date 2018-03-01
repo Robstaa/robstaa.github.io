@@ -1,6 +1,11 @@
 body {
   background: url("../images/mountain_background.jpg") no-repeat center center fixed;
   background-size: cover;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+body p {
+  font-size: 18px;
 }
 
 .fullHeight {
@@ -11,9 +16,9 @@ body {
   overflow: hidden;
 }
 
-.pageContent {
+.page-content {
   width: 80%;
-  height: 400px;
+  min-height: 400px;
   margin: 5px;
   padding:15px;
 
@@ -22,16 +27,24 @@ body {
   background-size: cover;
   color: white;
 
-  /*transform: rotate(0deg);*/
   transition: transform 1s;
 
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
-/*.pageContent:hover {
-  transform: rotate(1deg);
-}*/
+.user-input {
+  height: 50px;
+  max-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  padding-left: 5px;
+  margin: 10px;
+}
+
+.submit-button-style {
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
 
 .submit-button-style:hover {
   cursor: pointer;
