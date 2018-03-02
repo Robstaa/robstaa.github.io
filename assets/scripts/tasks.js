@@ -27,7 +27,7 @@ function calculateAge(birthYear) {
 };
 
 calculateAge(1993);
-calculateAge("hello");
+calculateAge("2020");
 calculateAge("2018");
 
 

@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
   });
 
   function pageChange() {
-    if (pageIndex === 0) {
+    if (pageIndex === 0) {                          // Arrow controlls
       previousArrow.classList.add("zero-opacity");
       previousArrow.classList.remove("arrow-transition");
     } else if (pageIndex ===  lastPageIndex) {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
       nextArrow.classList.remove("zero-opacity");
       nextArrow.classList.add("arrow-transition");
     }
-    for (let i = 0; i < allPages.length; i++) {
+    for (let i = 0; i < allPages.length; i++) {     // "renders" a new page
       allPages[i].classList.add("display-none");
     }
     allPages[pageIndex].classList.remove("display-none");
